@@ -17,6 +17,7 @@ $newString = preg_replace('/\s+/', '', $censoredParag);;
     <title>request</title>
 </head>
 <body>
+<h2>Versione originale: </h2>
     <p>
     <em><?php  echo $userParagraph ?></em>
     </p>
@@ -25,10 +26,6 @@ $newString = preg_replace('/\s+/', '', $censoredParag);;
     </p>
     <p> Numero caratteri: 
     <?php echo strlen($userParagraph) ?>
-    </p>
-
-    <p>
-    ❝<em><?php  echo $userParagraph ?>❞</em>
     </p>
     <h2>Versione censurata: </h2>
     <p>
