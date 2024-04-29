@@ -1,6 +1,6 @@
 <?php
 
-var_dump($_POST);
+// var_dump($_POST); //
 
 $_POST["userParagraph"];
 $userParagraph =$_POST["userParagraph"];
@@ -16,8 +16,11 @@ $userParagraph =$_POST["userParagraph"];
     <title>request</title>
 </head>
 <body>
-    <h2>
-  <?php  echo $userParagraph ?>
-    </h2>
+    <p>
+        <em><?php  echo $userParagraph ?></em>
+    </p>
+    <p>
+    <?php  echo str_word_count($userParagraph) ?>
+    </p>
 </body>
 </html>
