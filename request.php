@@ -3,8 +3,9 @@
 // var_dump($_POST); //
 
 $_POST["userParagraph"];
-$userParagraph =$_POST["userParagraph"];
-
+$userParagraph = $_POST["userParagraph"];
+$censoredParag = str_replace("come", "***", $userParagraph);
+$newString = preg_replace('/\s+/', '', $censoredParag);;
 
 ?>
 
@@ -17,10 +18,13 @@ $userParagraph =$_POST["userParagraph"];
 </head>
 <body>
     <p>
-    ❝<em><?php  echo $userParagraph ?>❞</em>
+    <em><?php  echo $userParagraph ?></em>
     </p>
     <p> Numero parole: 
     <?php  echo str_word_count($userParagraph) ?>
+    </p>
+    <p> Numero caratteri: 
+    <?php echo strlen($userParagraph) ?>
     </p>
 
     <p>
@@ -28,7 +32,11 @@ $userParagraph =$_POST["userParagraph"];
     </p>
     <h2>Versione censurata: </h2>
     <p>
-    <em>❝<?php  echo str_replace("come", "***", $userParagraph) ?>❞</em>
+    <em><?php  echo str_replace("come", "***", $userParagraph) ?></em>
     </p>
+    <p> Numero caratteri (spazi esclusi): 
+    <?php echo strlen($newString) ?>
+    </p>
+   
 </body>
 </html>
