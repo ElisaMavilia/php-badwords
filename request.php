@@ -17,9 +17,9 @@ $userParagraph =$_POST["userParagraph"];
 </head>
 <body>
     <p>
-        <em><?php  echo $userParagraph ?></em>
+    ❝<em><?php  echo $userParagraph ?>❞</em>
     </p>
-    <p>
+    <p> Numero parole: 
     <?php  echo str_word_count($userParagraph) ?>
     </p>
 </body>
